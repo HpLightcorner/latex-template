@@ -1,0 +1,23 @@
+{
+    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "arara",
+            "tools": [
+                "arara"
+            ]
+        }
+    ],
+
+    "latex-workshop.latex.tools": [
+        {
+            "name": "arara",
+            "command": "arara",
+            "args": [
+                "%DOC%",
+                "--verbose"
+            ]
+        }
+    ]
+}
