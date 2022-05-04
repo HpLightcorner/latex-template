@@ -19,5 +19,6 @@
                 "--verbose"
             ]
         }
-    ]
+    ],
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false
 }
