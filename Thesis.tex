@@ -1,4 +1,9 @@
-% arara: latexmk: { options: [--output-directory=out] }
+% /* cSpell:disable */
+
+% arara: pdflatex: { options: "--aux-directory=out", interaction: nonstopmode, shell: true, synctex: true }
+% arara: biber: { options: [ '--isbn-normalise' ] }
+% arara: makeindex
+% arara: makeglossaries
 
 \documentclass{mimosis}
 
@@ -69,21 +74,7 @@
   \singlespacing
 \fi
 
-\newacronym[description={Principal component analysis}]{PCA}{PCA}{principal component analysis}
-\newacronym                                            {SNF}{SNF}{Smith normal form}
-\newacronym[description={Topological data analysis}]   {TDA}{TDA}{topological data analysis}
-
-\newglossaryentry{LaTeX}{%
-  name        = {\LaTeX},
-  description = {A document preparation system},
-  sort        = {LaTeX},
-}
-
-\newglossaryentry{Real numbers}{%
-  name        = {$\real$},
-  description = {The set of real numbers},
-  sort        = {Real numbers},
-}
+\input{abbr.tex}
 
 \makeindex
 \makeglossaries
@@ -193,7 +184,9 @@
   \begingroup
     \let\clearpage\relax
     \glsaddall
-    % \printglossary[type=\acronymtype]
+    \printglossary[type=\acronymtype]
+    \newpage
+    \printglossary
   \endgroup
 
   \printindex
