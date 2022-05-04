@@ -1,9 +1,8 @@
 % /* cSpell:disable */
 
-% arara: pdflatex: { options: "--aux-directory=out", interaction: nonstopmode, shell: true, synctex: true }
-% arara: biber: { options: [ '--isbn-normalise' ] }
-% arara: makeindex
-% arara: makeglossaries
+% arara: pdflatex: { options: ['--output-directory=build', '--recorder'], interaction: nonstopmode, shell: true, synctex: true }
+% arara: biber: { options: ['--output-directory=build', '--isbn-normalise'] }
+% arara: makeglossaries: { options: ['-d./build'] }
 
 \documentclass{mimosis}
 
