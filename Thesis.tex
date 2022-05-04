@@ -1,4 +1,9 @@
-% arara: latexmk: { options: [--output-directory=out] }
+% /* cSpell:disable */
+
+% arara: pdflatex: { options: "--aux-directory=out", interaction: nonstopmode, shell: true, synctex: true }
+% arara: biber: { options: [ '--isbn-normalise' ] }
+% arara: makeindex
+% arara: makeglossaries
 
 \documentclass{mimosis}
 

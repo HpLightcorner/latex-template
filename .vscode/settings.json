@@ -1,6 +1,7 @@
 {
-    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.outDir": "./out/",
     "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
     "latex-workshop.latex.recipes": [
         {
             "name": "arara",
@@ -19,6 +20,5 @@
                 "--verbose"
             ]
         }
-    ],
-    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false
+    ]
 }
